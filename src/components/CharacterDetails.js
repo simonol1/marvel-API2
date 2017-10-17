@@ -30,7 +30,7 @@ class CharacterDetails extends React.Component {
         const { character } = this.props;
         const hasCharacterData = Object.keys(character).length !== 0;
         return (
-            <div className='container'>
+            <div className='marvel-container'>
                 {!hasCharacterData && <Loading />}
                 {hasCharacterData && renderCharacterDetails(character)}
             </div>

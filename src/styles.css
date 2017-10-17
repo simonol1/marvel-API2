@@ -4,6 +4,7 @@ img {
     margin-left: 80px;
     margin-right: 80px;
     margin-bottom: 30px;
+    border: 2px solid grey;
 }
 
 #header_image {
@@ -13,6 +14,7 @@ img {
     text-align: center;
     margin-right: auto;
     margin-left: auto;
+    border: none;
 }
 
 .row {
@@ -24,22 +26,25 @@ body {
     background-color: black;
 }
 
-
-
 div {
     display: inline-block;
 }
 
-.container {
-    border: 2px solid gray;
-    display: inline-block;
-    width: 80%;
+.marvel-container {
+    display: block;
+    background-image: url('http://x.annihil.us/u/prod/marvel/i/mg/8/b0/537ba702ad5b3.gif'); 
+    width: 100%;
+    margin-left:auto;
+    margin-right: auto;
+    padding: 100px;
+
 }
 
 h1 {
     text-align: center;
     color: white;
     font-size: 50px;
+    margin-bottom: 50px;
 }
 
 
@@ -47,13 +52,16 @@ h2 , p {
     color: white;
     text-align: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
 }
 
 h4, h3, li {
     text-align: left;
     color: white;
-    font-size: 25px;
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-top: 10px;
+    margin-left: 30px;
 }
 
 a {

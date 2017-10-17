@@ -15,7 +15,10 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
+    "test": "ava -v 'tests/*.test.js'",
     "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "ava": "^0.22.0"
   }
 }
