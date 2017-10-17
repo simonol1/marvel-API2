@@ -1,0 +1,68 @@
+/* character images */
+img {
+    display: block;
+    margin-left: 80px;
+    margin-right: 80px;
+    margin-bottom: 30px;
+}
+
+#header_image {
+    height: 250px;
+    width: auto;
+    display: inline-block;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.row {
+    width: 100%;
+    text-align: center;
+}
+
+body {
+    background-color: black;
+}
+
+
+
+div {
+    display: inline-block;
+}
+
+.container {
+    border: 2px solid gray;
+    display: inline-block;
+    width: 80%;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    font-size: 50px;
+}
+
+
+h2 , p {
+    color: white;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-bottom: 30px;
+}
+
+h4, h3, li {
+    text-align: left;
+    color: white;
+    font-size: 25px;
+}
+
+a {
+    text-decoration: none;
+    color: White;
+}
+
+.footer {
+    text-align: center;
+}
+
+
