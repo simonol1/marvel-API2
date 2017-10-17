@@ -4,6 +4,8 @@ import {connect} from 'react-redux'
 import {getCharacters} from '../actions/characters'
 import CharacterList from './CharacterList'
 
+import Loading from './Loading'
+
 
 class Characters extends React.Component {
 
@@ -19,8 +21,9 @@ class Characters extends React.Component {
 
     return (
         <div>
+
           {loading &&
-            <img src="https://digitalsynopsis.com/wp-content/uploads/2016/06/loading-animations-preloader-gifs-ui-ux-effects-32.gif"/> 
+            <Loading /> 
           }
           {!loading &&
            this.props.characters.map((character) => <CharacterList character={character} key={character.id} />)}

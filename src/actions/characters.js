@@ -39,7 +39,7 @@ export function getCharacters () {
         .get(`https://gateway.marvel.com/v1/public/characters/${id}?apikey=e481756ef01f8f8ca6367e54de21f96f`)
         .end((err, res) => {
           console.log(res.body.data.results);
-          err ? dispatch(setErrorMessage("ERROR:" + err.message)) : (res.body.data.results)
+          err ? dispatch(setErrorMessage("ERROR:" + err.message)) : dispatch(receiveCharacters(res.body.data.results))
         })
       } 
     }

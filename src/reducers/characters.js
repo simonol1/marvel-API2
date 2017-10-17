@@ -14,7 +14,7 @@ function characters (state = initialState, action) {
       return {
         ...state,
         loading: false,
-        results: action.characters
+        results: [...state.results, ...action.characters]
       }
 
     default:
