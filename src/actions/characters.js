@@ -1,22 +1,26 @@
 import request from 'superagent'
 
+export const RECEIVE_CHARACTERS = 'RECEIVE_CHARACTERS'
+export const SET_ERROR_MESSAGE = 'SET_ERROR_MESSAGE'
+export const LOADING = 'LOADING'
+
 export const receiveCharacters = (characters) => {
   return {
-    type: 'RECEIVE_CHARACTERS',
+    type: RECEIVE_CHARACTERS,
     characters
   }
 }
 
 export const setErrorMessage = (message) => {
   return {
-    type: 'SET_ERROR_MESSAGE',
+    type: SET_ERROR_MESSAGE,
     errorMessage: message
   }
 }
 
 export const changeLoadState = (newLoadState) => {
   return {
-      type: 'LOADING'
+      type: LOADING
   }
 }
 
