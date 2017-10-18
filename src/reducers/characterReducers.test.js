@@ -1,7 +1,7 @@
 
 import reducer from './characters'
-import { RECEIVE_CHARACTERS } from '../actions/characters'
-import { LOADING } from '../actions/characters'
+import { RECEIVE_CHARACTERS, LOADING } from '../actions/characters'
+
 
 describe('characterReducers', () => {
     it('should return the state when the action falls through', () => {
@@ -16,8 +16,9 @@ describe('characterReducers', () => {
         expect(reducer(state,{type:RECEIVE_CHARACTERS, characters})).toEqual(expectedState)
     })
 
-    it('the loading state should remain the same after loading ACTION is dispatched', () => {
-        const state = {loading:true}
-        expect(reducer(state, {type: LOADING})).toEqual(state)
+    it('the loading state should change to true when the action is LOADING', () => {
+        const state = {loading:false}
+        const expectedState = {loading:true}
+        expect(reducer(state, {type: LOADING})).toEqual(expectedState)
     })
 })

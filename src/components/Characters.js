@@ -7,10 +7,9 @@ import CharacterList from './CharacterList'
 import Loading from './Loading'
 
 
-class Characters extends React.Component {
+export class Characters extends React.Component {
 
   componentWillMount() {
-    console.log(this.props);
     if (this.props.characters.length === 0) {
       this.props.dispatch(getCharacters())
     };
@@ -33,7 +32,7 @@ class Characters extends React.Component {
   }
 }
 
-const mapStateToProps = (state) => {
+export const mapStateToProps = (state) => {
   return {
     characters: state.characters.results,
     loading: state.characters.loading
