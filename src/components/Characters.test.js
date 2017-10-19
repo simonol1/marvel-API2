@@ -27,11 +27,17 @@ describe('Characters component', () => {
             loading: state.characters.loading
         }
         expect(mapStateToProps(state)).toEqual(expected)
-        
-        // pass it a state which contains characters key which is an object
-        // that object should have results and loading
+    })
 
-        // your expect ist hat it returns an object with a characters and loading key with the values from state
+    it('should run dispatch when there are no characters', () => {
+        const dispatchSpy = jest.fn() 
+        const wrapper = shallow(<NotConnectedCharacters dispatch={dispatchSpy} characters={[]} />)
+        expect(dispatchSpy.mock.calls.length).toBe(1) 
+    })
+    it('should not run dispatch when there are characters', () => {
+        const dispatchSpy = jest.fn() 
+        const wrapper = shallow(<NotConnectedCharacters dispatch={dispatchSpy} characters={['batman', 'superman']} />)
+        expect(dispatchSpy.mock.calls.length).toBe(0) 
     })
 })
 

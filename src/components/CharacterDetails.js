@@ -2,6 +2,7 @@ import React from 'react'
 import {connect} from 'react-redux'
 
 import {getCharacterbyId} from '../actions/characters'
+
 import Loading from './Loading'
 
   const renderCharacterDetails = (props) => {
@@ -20,7 +21,7 @@ import Loading from './Loading'
     )
 }
 
-class CharacterDetails extends React.Component {
+export class CharacterDetails extends React.Component {
     componentDidMount() {
         const id = this.props.match.params.id;
         this.props.dispatch(getCharacterbyId(id))
@@ -38,17 +39,17 @@ class CharacterDetails extends React.Component {
     }
 }
 
-const mapStateToProps = (state, ownProps) => {
+export const mapStateToProps = (state, ownProps) => {
     const id = ownProps.match.params.id;
-    
-    const character = state.characters.results.reduce((prev,character) =>{
-        if (character.id.toString() === id) {
-            return {...prev,...character}
-        } 
-        return prev;
-    }, {})
 
-  return { character }
+    const character = state.characters.results.find(character => {
+        if (character.id.toString() === id) {
+            return true 
+        } else {
+            return false
+        }
+    });
+    return { character } 
 }
 
 export default connect(mapStateToProps)(CharacterDetails)
