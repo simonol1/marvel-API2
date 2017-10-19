@@ -17,6 +17,18 @@ img {
     border: none;
 }
 
+.footer {
+    text-align: right;
+    padding-right: 20px;
+    padding-top: 40px;
+    color: rgba(231, 110, 110, 0.5);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.loading > img {
+    border: none;   
+}
+
 .row {
     width: 100%;
     text-align: center;
@@ -24,6 +36,7 @@ img {
 
 body {
     background-color: black;
+    background-image: url('http://x.annihil.us/u/prod/marvel/i/mg/8/b0/537ba702ad5b3.gif'); 
 }
 
 div {
@@ -36,7 +49,6 @@ div {
     width: 100%;
     margin-left:auto;
     margin-right: auto;
-    padding: 100px;
 }
 
 h1 {
@@ -44,9 +56,10 @@ h1 {
     color: white;
     font-size: 50px;
     margin-bottom: 50px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-h2 , p {
+h2 {
     color: white;
     text-align: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -65,8 +78,4 @@ h4, h3, li {
 a {
     text-decoration: none;
     color: White;
-}
-
-.footer {
-    text-align: center;
 }

@@ -13,6 +13,7 @@ const CharacterList = (props) => {
         <Link to={`/details/${id}`}><h2>{c.name}</h2><img src={imagePath} alt={c.name}/></Link>
        </div>
     </span>
+    // link
   )
 }
 
