@@ -43,12 +43,9 @@ export const mapStateToProps = (state, ownProps) => {
     const id = ownProps.match.params.id;
 
     const character = state.characters.results.find(character => {
-        if (character.id.toString() === id) {
-            return true 
-        } else {
-            return false
-        }
-    });
+        return character.id.toString() === id
+    })
+    
     return { character } 
 }
 
