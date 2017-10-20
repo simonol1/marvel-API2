@@ -1,5 +1,25 @@
-/* character images */
-img {
+
+body {
+    background-color: black; 
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+.container {
+    width: 100%;
+}
+
+.header_img {
+    height: 250px;
+    width: auto;
+    display: block;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+    border: none;
+}
+.character_img {
     display: block;
     margin-left: 80px;
     margin-right: 80px;
@@ -7,37 +27,38 @@ img {
     border: 2px solid grey;
 }
 
-#header_image {
-    height: 250px;
-    width: auto;
-    display: inline-block;
+.header {
     text-align: center;
-    margin-right: auto;
-    margin-left: auto;
-    border: none;
+    width: 100%;
+    display: inline-block;
 }
+
 
 .footer {
-    text-align: right;
-    padding-right: 20px;
-    padding-top: 40px;
+    text-align: center;
     color: rgba(231, 110, 110, 0.5);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 100%;
+    margin-top: 15px;
 }
 
-.loading > img {
+.loading {
     border: none;   
+    margin-left: auto;
+    margin-right: auto;
+    display: inline-block;
+    text-align: center;
 }
 
-.row {
+.loading_div {
+    width: 100%;
+}
+
+.content {
     width: 100%;
     text-align: center;
 }
 
-body {
-    background-color: black;
-    background-image: url('http://x.annihil.us/u/prod/marvel/i/mg/8/b0/537ba702ad5b3.gif'); 
-}
 
 div {
     display: inline-block;
@@ -47,8 +68,13 @@ div {
     display: block;
     background-image: url('http://x.annihil.us/u/prod/marvel/i/mg/8/b0/537ba702ad5b3.gif'); 
     width: 100%;
-    margin-left:auto;
+    margin-left: auto;
     margin-right: auto;
+}
+
+.character_details {
+    background-color:rgba(217, 217, 217, 0.3);
+    padding: 30px;
 }
 
 h1 {
@@ -57,6 +83,11 @@ h1 {
     font-size: 50px;
     margin-bottom: 50px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+hr {
+    border: 1px solid black;
+    width: 90%;
 }
 
 h2 {
@@ -69,13 +100,20 @@ h2 {
 h4, h3, li {
     text-align: left;
     color: white;
-    font-size: 20px;
+    font-size: 30px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    margin-top: 10px;
+    margin-top: 20px;
     margin-left: 30px;
+    margin-left: 100px;
 }
 
 a {
     text-decoration: none;
     color: White;
+}
+
+img {
+    margin-bottom: 30px;
+    border: 2px grey solid;
+    
 }

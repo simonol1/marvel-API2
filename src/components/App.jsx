@@ -9,18 +9,18 @@ import Footer from './Footer'
 const App = (props) => {
   return (
     <BrowserRouter>
-      <span>
-        <div className='row'>
+      <div className='container'>
+        <div className='header'>
           <Header />
         </div>
-        <div className='row'>
+        <div className='content'>
           <Route exact path="/" component={Characters} />
           <Route path='/details/:id' component={CharacterDetails}/>
         </div>
-        <div className='row'>
+        <div className='footer'>
           <Footer />
         </div>
-      </span>
+      </div>
     </BrowserRouter>
     )
 }

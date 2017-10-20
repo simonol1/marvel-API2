@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom'
 
 const Header = () => {
     return (
-      <div className='header'>
-        <Link to='/'><img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqmOQXn9ai3iH3IcyHW7bHPmaBUF6AI_HLZWFXJZ3_kF94CpN-' alt='' id='header_image'/></Link>
+      <div>
+        <Link to='/'><img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqmOQXn9ai3iH3IcyHW7bHPmaBUF6AI_HLZWFXJZ3_kF94CpN-' className='header_img' alt='' /></Link>
      </div>
    )
 }
