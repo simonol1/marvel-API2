@@ -13,10 +13,7 @@ import Loading from './Loading'
         const info = props.description
         const actualDescription = (info == "" )? "I'm the most exciting hero in the world...where is my description!!" : props.description
         const comics = props.comics.items;
-        // const actualComics = (!comics) ? 'no comics at this stage' : comics.name
 
-
-        console.log(!comics)
         return (
             <div className='character_details'>
                 <h1>{props.name}</h1>
@@ -30,18 +27,17 @@ import Loading from './Loading'
                     {comics.map((comic) =><span key={comic.resourceURI}><li>{comic.name} </li></span> )}
                 </ul>
             </div>
-        // mapping over the array and pulling out comics related to the character
     )
 }
 
 export class CharacterDetails extends React.Component {
     componentDidMount() {
         const id = this.props.match.params.id; // nested object
-        this.props.dispatch(getCharacterbyId(id)) 
+        this.props.dispatch(getCharacterbyId(id))
         // use this to help the function remember props
     }
 
-    render () {  
+    render () {
         const { character } = this.props;
         const hasCharacterData = Object.keys(character).length !== 0;
         return (
@@ -60,8 +56,8 @@ export const mapStateToProps = (state, ownProps) => {
     const character = state.characters.results.find(character => {
         return character.id.toString() === id
     }) || {}
-    
-    return { character } 
+
+    return { character }
 }
 
 export default connect(mapStateToProps)(CharacterDetails)

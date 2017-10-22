@@ -20,9 +20,8 @@ export class Characters extends React.Component {
 
     return (
         <div>
-
           {loading &&
-            <Loading /> 
+            <Loading />
           }
           {!loading &&
            this.props.characters.map((character) => <CharacterList character={character} key={character.id} />)}
@@ -36,8 +35,7 @@ export const mapStateToProps = (state) => {
   return {
     characters: state.characters.results,
     loading: state.characters.loading
-  }
-
+   }
 }
 
 export default connect(mapStateToProps)(Characters)

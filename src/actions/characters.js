@@ -4,9 +4,6 @@ export const RECEIVE_CHARACTERS = 'RECEIVE_CHARACTERS'
 export const SET_ERROR_MESSAGE = 'SET_ERROR_MESSAGE'
 export const LOADING = 'LOADING'
 
-//export action creators above so that they can tested
-// Why do they need to be changed from being a string?
-
 export const receiveCharacters = (characters) => {
   return {
     type: RECEIVE_CHARACTERS,
@@ -27,12 +24,9 @@ export const changeLoadState = (newLoadState) => {
   }
 }
 
-// API calls
-// 
-
 export function getCharacters () {
   return (dispatch) => {
-   dispatch(changeLoadState(true)) // dispatch loading before the api call is made
+   dispatch(changeLoadState(true)) 
      request
        .get('https://gateway.marvel.com/v1/public/characters?apikey=e481756ef01f8f8ca6367e54de21f96f')
        .end((err, res) => {
@@ -50,5 +44,5 @@ export function getCharacters () {
           console.log(res.body.data.results);
           err ? dispatch(setErrorMessage("ERROR:" + err.message)) : dispatch(receiveCharacters(res.body.data.results))
         })
-      } 
+      }
     }
