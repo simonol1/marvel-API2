@@ -18,11 +18,11 @@ import Loading from './Loading'
             <div className='character_details'>
                 <h1>{props.name}</h1>
                 <div><img src={imagePath} alt={props.name}/></div>
-                <h2>{actualDescription}</h2>
+                <h3>{actualDescription}</h3>
                 <hr></hr>
-                <h4>Featuring in
+                <h3>Featuring in
                     {comics !== [] && " no comics at this stage"}
-                </h4>
+                </h3>
                 <ul>
                     {comics.map((comic) =><span key={comic.resourceURI}><li>{comic.name} </li></span> )}
                 </ul>
